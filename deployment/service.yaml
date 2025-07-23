@@ -1,0 +1,13 @@
+# kubernetes/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-service
+spec:
+  selector:
+    app: fastapi-app
+  ports:
+  - protocol: TCP
+    port: 80 # External port for access
+    targetPort: 8000 # Internal container port
+  type: LoadBalancer # Exposes your app externally with a GCP Load Balancer
