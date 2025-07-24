@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 async def read_root():
-    return {"message": "Hello from FastAPI on Kubernetes!"}
+    return {"message": "Hello from FastAPI on Kubernetes by Naveen!"}
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int, q: str = None):
